@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  postgres_service:
+    image: postgres:latest
+    container_name: idb_postgres
+    environment:
+      POSTGRES_DB: database_postgres
+      POSTGRES_USER: name_user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    networks:
+      - relatorios_idb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: idb_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: your_email@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: "password"
+    ports:
+      - "5050:80"
+    networks:
+      - relatorios_idb
+    depends_on:
+      - postgres_service
+
+
+networks:
+  relatorios_idb:
+    driver: bridge
+
+volumes:
+  postgres_data:
