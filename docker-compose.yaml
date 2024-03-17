@@ -1,6 +1,6 @@
 version: '3'
 
-services: database
+services:
   postgres_service:
     image: postgres:latest
     container_name: idb_postgres
