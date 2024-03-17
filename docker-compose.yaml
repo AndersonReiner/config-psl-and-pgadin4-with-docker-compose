@@ -1,13 +1,13 @@
 version: '3'
 
-services:
+services: database
   postgres_service:
     image: postgres:latest
     container_name: idb_postgres
     environment:
       POSTGRES_DB: database_postgres
       POSTGRES_USER: name_user
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: passworduser
     ports:
       - "5432:5432"
     networks:
@@ -20,7 +20,7 @@ services:
     container_name: idb_pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: your_email@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: "passwordpassowr"
+      PGADMIN_DEFAULT_PASSWORD: "passwordemail"
     ports:
       - "5050:80"
     networks:
