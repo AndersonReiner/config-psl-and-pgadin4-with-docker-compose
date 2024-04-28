@@ -1,6 +1,6 @@
 # Iniciando o serviço do PSL e PgAdmin no Docker
 
-### 1. Certifique de estar com o arquivo.yaml na pasta. 
+### 1. Certifique de estar com o arquivo.yaml na pastaa. 
 
 > `ls`
 
