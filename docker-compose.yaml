@@ -1,5 +1,5 @@
 version: '3'
-
+172.18.0.2
 services:
   postgres_service:
     image: postgres:latest
@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: database_postgres
       POSTGRES_USER: aluno
-      POSTGRES_PASSWORD: superseguro
+      POSTGRES_PASSWORD: root
     ports:
       - "5432:5432"
     networks:
@@ -19,8 +19,8 @@ services:
     image: dpage/pgadmin4:latest
     container_name: idb_pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: reiner.anderson@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: "superseguro"
+      PGADMIN_DEFAULT_EMAIL: aluno@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: "root"
     ports:
       - "5050:80"
     networks:
